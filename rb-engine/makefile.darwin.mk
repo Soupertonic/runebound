@@ -8,7 +8,7 @@ toolchain.compiler = clang
 toolchain.linker = clang
 
 build.distribution.directory = dist
-build.distribution.binary = libRuneboundEngine.dylib
+build.distribution.binary = librbengine.dylib
 
 build.include.directory = include
 build.include.files = $(shell find $(build.include.directory) -name '*.h')
