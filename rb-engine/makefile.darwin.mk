@@ -1,8 +1,8 @@
 .PHONY: setup tidy
-.SUFFXES:
+.SUFFIXES:
 
 MAKEFLAGS += -rR
- 
+
 toolchain.assembler = clang
 toolchain.compiler = clang
 toolchain.linker = clang
@@ -25,7 +25,7 @@ flags.default.linker = -Wl,-undefined -Wl,dynamic_lookup -I $(build.include.dire
 flags.debug.compiler = $(flags.default.compiler) -g
 flags.debug.linker = $(flags.default.linker)
 
-flags.release.compiler = $(flags.default.compiler) -g -O3 -static -fdata-sections -ffunction-sections
+flags.release.compiler = $(flags.default.compiler) -g -O3 -fdata-sections -ffunction-sections
 flags.release.linker = $(flags.default.linker) -O3 -Wl,-dead_strip
 
 default: debug
