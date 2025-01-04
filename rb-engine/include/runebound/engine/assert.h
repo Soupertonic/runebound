@@ -16,10 +16,10 @@
 
 #define rbAssertExpression(expression) \
     (void) ((expression) ||           \
-           (rbAssert("%s:%d: failed expression assertion '%s'\n", #expression), 0))
+            (rbAssert("%s:%d: failed expression assertion '%s'\n", #expression), 0))
 
 #define rbAssertNotNull(target)    \
     (void) ((target != nullptr) || \
-           (rbAssert("%s:%d: failed not null assertion for '%s'\n", #target), 0))
+            (rbAssert("%s:%d: failed not null assertion for '%s'\n", #target), 0))
 #endif
 
