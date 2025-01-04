@@ -10,16 +10,16 @@
 #endif
 
 #ifndef NDEBUG
-#define rbAssert(format, expression)                          \
-    ((void) printf(format, __FILE__, __LINE__, expression), \
+#define rbAssert(format, expression)                                                     \
+    ((void) printf(format, __FILE__, __LINE__, expression),                              \
             abort())
 
-#define rbAssertExpression(expression) \
-    (void) ((expression) ||           \
+#define rbAssertExpression(expression)                                                   \
+    (void) ((expression) ||                                                              \
             (rbAssert("%s:%d: failed expression assertion '%s'\n", #expression), 0))
 
-#define rbAssertNotNull(target)    \
-    (void) ((target != nullptr) || \
+#define rbAssertNotNull(target)                                                          \
+    (void) ((target != nullptr) ||                                                       \
             (rbAssert("%s:%d: failed not null assertion for '%s'\n", #target), 0))
 #endif
 
